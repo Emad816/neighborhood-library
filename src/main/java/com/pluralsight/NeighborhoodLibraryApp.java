@@ -62,8 +62,7 @@ public class NeighborhoodLibraryApp {
             return;
         }
         System.out.print("\nEnter a book Id to check out, or 0 to go back home: ");
-        int id = scanner.nextInt();
-        scanner.nextLine(); //clears leftover
+        int id = Integer.parseInt(scanner.nextLine().trim());
         if (id == 0) {
             return;
         }
@@ -112,8 +111,7 @@ public class NeighborhoodLibraryApp {
 
     private static void checkInBook() {
         System.out.print("Enter the Id of the book to check in: ");
-        int id = scanner.nextInt();
-        scanner.nextLine(); //clears leftover
+        int id = Integer.parseInt(scanner.nextLine().trim());
 
         Book book = findBookById(id);
         if (book == null) {
