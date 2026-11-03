@@ -7,6 +7,7 @@ public class Book {
     private boolean isCheckedOut;
     private String checkedOutTo;
 
+    //Creates a book that starts out available (not checked out)
     public Book(int id, String isbn, String title) {
 
         this.id = id;
@@ -16,6 +17,7 @@ public class Book {
         this.checkedOutTo = "";
     }
 
+    // ---------- Getters and setters ----------
     public int getId() {
         return id;
     }
@@ -55,12 +57,12 @@ public class Book {
     public void setCheckedOutTo(String checkedOutTo) {
         this.checkedOutTo = checkedOutTo;
     }
-
+    //Checks the book out to the given person
     public void checkOut(String name) {
         checkedOutTo = name;
         isCheckedOut = true;
     }
-
+    //Returns the book to the library
     public void checkIn() {
         checkedOutTo = "";
         isCheckedOut = false;

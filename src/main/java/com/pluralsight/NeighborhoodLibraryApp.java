@@ -29,7 +29,7 @@ public class NeighborhoodLibraryApp {
 
 
 
-
+    //Methode to build library inventory
     private static Book[] buildInventory() {
         return new Book[]{
                 new Book(1, "9780743273565", "The Great Gatsby"),
