@@ -30,8 +30,25 @@ public class NeighborhoodLibraryApp {
         System.out.print("Enter your choice: ");
     }
 
+    //Runs a loop to check available books and display them
+    private static void showAvailableBooks() {
+        System.out.println();
+        System.out.println("===== AVAILABLE BOOKS =====");
 
+        boolean anyAvailable = false;
+        for (Book book : inventory) {
+            if (!book.isCheckedOut()) {
+                anyAvailable = true;
+                System.out.printf("Id: %-3d ISBN: %-15s Title: %s%n",
+                        book.getId(), book.getIsbn(), book.getTitle());
+            }
+        }
 
+        if (!anyAvailable) {
+            System.out.println("All books are currently checked out.");
+            return;
+        }
+    }
 
 
 
