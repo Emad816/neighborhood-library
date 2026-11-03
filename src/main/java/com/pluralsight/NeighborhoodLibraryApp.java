@@ -1,13 +1,33 @@
 package com.pluralsight;
 
+import java.util.Scanner;
+
 public class NeighborhoodLibraryApp {
+
+    public static Book[] inventory = buildInventory();
+    public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
 
-        Book[] inventory = buildInventory();
+        System.out.println("Welcome to the Neighborhood Library!");
+        boolean running = true;
 
 
 
+
+
+
+
+
+    }
+
+    private static void showHomeScreen() {
+        System.out.println();
+        System.out.println("===== HOME =====");
+        System.out.println("1 - Show Available Books");
+        System.out.println("2 - Show Checked Out Books");
+        System.out.println("3 - Exit");
+        System.out.print("Enter your choice: ");
     }
 
 
